@@ -1,0 +1,246 @@
+:root{
+    --pink:#01707c;
+} 
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+    text-decoration: none;
+
+}
+html{
+    font-size: 62.5%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+.btn{
+    position:absolute;
+    margin-top: 1rem;
+    border-radius: 10rem;
+    background: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    width: 8%;
+    height: 10%;
+    top: 100;
+    left: 10;
+
+}
+.btn img{
+    width: 100%;
+    height: 100%;
+}
+
+.btn:hover{
+    background-color: var(--pink);
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #dcdcdcb3;
+    padding: 2rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+
+}
+ header .logo{
+      font-size:3rem ;
+      color: #333;
+      font-weight: bolder;
+
+  }
+
+  header .logo span{
+      color: var(--pink);
+
+  }
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+    text-decoration: none;
+}
+header .navbar a:hover{
+    color: var(--pink);
+}
+header .icons a:hover{
+    color: var(--pink);
+}
+header .icons a{
+    font-size: 3rem;
+    color: #333;
+    margin-left: 1.5rem;
+
+
+}
+
+header .navbar a:hover{
+    color: var(--pink);
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+   color:#333 ;
+   border-radius: .5rem;
+   padding: .5rem 1.5rem;
+   cursor: pointer;
+   border: .1rem solid rgba(0, 0, 0, .3);
+   display: none;
+
+}
+/*************************************************/
+section{
+    margin-top: 6%;
+    padding: 2rem 9%;
+    background-color: #f0f0f0;
+    height: 100vh;
+}
+h1{
+    font-weight: 500;
+    font-size: 30px;
+    margin: 20px;
+}
+
+h1 span{
+    color: var(--pink);
+   
+}
+.contact .row{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.contact .row form{
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem ;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+
+    background: #fff;
+}
+.contact .row .image{
+    flex: 1 1 44rem;
+}
+.contact .row .image img{
+width: 100%;    
+}
+
+
+.contact .row form .box{
+    padding: 1rem ;
+    font-size: 1.7rem;
+    color: #333 ;
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    margin: .7rem 0;
+    width: 100%;
+
+}
+.contact .row form .box:focus{
+    border-color: var(--pink) ;
+}
+.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+#btn{
+    padding: 8px;
+    margin: 20px 20px 0 0;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: var(--pink);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+#btn:hover{
+    color: white;
+    background-color: var(--pink);
+    background: #666;
+}
+
+
+/*************************************************/
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+
+    }
+    header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+    .home{
+        background-position: left;
+    }
+}
+
+@media(max-width:768px){
+    header .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top:100%; left: 0; right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0% 0%, 100% 0% , 100%  0% , 0% 0%);
+    }
+    header #toggler:checked ~.navbar{
+        clip-path: polygon(0% 0%, 100% 0% , 100%  100% , 0% 100%);
+
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0, 0, 0, .1);
+        display: block;
+    }
+    .home .content h3{
+        font-size: 5rem;
+    }
+    .home .content span{
+        font-size: 2.5rem;
+    }
+    .home{
+        background-size:cover;
+
+    }
+
+}
+
+
+
+
+
+
